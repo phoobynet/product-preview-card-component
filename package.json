@@ -1,8 +1,13 @@
 {
-  "name": "product-preview-card-component",
+  "name": "fm-product-preview-card-component",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "description": "Frontendmentors.io Product Preview Card Component",
+  "author": {
+    "name": "phoobynet",
+    "email": "phoobynet@users.noreply.github.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
