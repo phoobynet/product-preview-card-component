@@ -1,6 +1,6 @@
 import ProductPreviewCard from '../../components/ProductPreviewCard'
 import styles from './Home.module.scss'
-import { useState } from 'react'
+import { MouseEventHandler, useState } from 'react'
 import { Product } from '../../types/Product'
 
 export default function Home() {
@@ -17,9 +17,16 @@ export default function Home() {
     },
   })
 
+  const addToCart: MouseEventHandler<HTMLButtonElement> = () => {
+    alert('Added to cart')
+  }
+
   return (
     <div className={styles.home}>
-      <ProductPreviewCard product={product}></ProductPreviewCard>
+      <ProductPreviewCard
+        product={product}
+        addToCart={addToCart}
+      />
     </div>
   )
 }

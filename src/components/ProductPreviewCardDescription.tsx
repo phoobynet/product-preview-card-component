@@ -1,10 +1,14 @@
 import { Product } from '../types/Product'
+import { useContext } from 'react'
+import { ProductPreviewCardContext } from './ProductPreviewCardContext'
 
-type Props = {
-  product: Product
-}
+export default function ProductPreviewCardDescription() {
+  const product = useContext<Product | undefined>(ProductPreviewCardContext)
 
-export default function ProductPreviewCardDescription({ product }: Props) {
+  if (!product) {
+    return <></>
+  }
+
   return (
     <p className="text-[14px] font-medium text-aurometalSaurus md:text-[13px]">
       {product.description}

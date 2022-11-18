@@ -1,10 +1,14 @@
 import { Product } from '../types/Product'
+import { useContext } from 'react'
+import { ProductPreviewCardContext } from './ProductPreviewCardContext'
 
-type Props = {
-  product: Product
-}
+export default function ProductPreviewCardImage() {
+  const product = useContext<Product | undefined>(ProductPreviewCardContext)
 
-export default function ProductPreviewCardImage({ product }: Props) {
+  if (!product) {
+    return <></>
+  }
+
   return (
     <>
       <img
