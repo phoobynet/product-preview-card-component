@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/fm-product-preview-card-component/',
+  base: '/product-preview-card-component/',
   plugins: [react()],
   css: {
     modules: {
