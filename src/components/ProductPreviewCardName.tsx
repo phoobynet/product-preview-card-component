@@ -10,7 +10,7 @@ export default function ProductPreviewCardName() {
   }
 
   return (
-    <div
+    <h1
       className="font-display"
       style={{
         fontSize: '32px',
@@ -18,6 +18,6 @@ export default function ProductPreviewCardName() {
       }}
     >
       {product.name}
-    </div>
+    </h1>
   )
 }
