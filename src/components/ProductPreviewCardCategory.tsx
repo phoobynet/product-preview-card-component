@@ -1,4 +1,4 @@
-import { Product } from '../types/Product'
+import { Product } from '@/types/Product'
 import { useContext } from 'react'
 import { ProductPreviewCardContext } from './ProductPreviewCardContext'
 

@@ -1,4 +1,4 @@
-import { Product } from '../types/Product'
+import { Product } from '@/types/Product'
 import { createContext } from 'react'
 
 export const ProductPreviewCardContext = createContext<Product | undefined>(

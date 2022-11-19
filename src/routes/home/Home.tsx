@@ -1,32 +1,21 @@
-import ProductPreviewCard from '../../components/ProductPreviewCard'
-import styles from './Home.module.scss'
 import { MouseEventHandler, useState } from 'react'
-import { Product } from '../../types/Product'
+import { Product } from '@/types/Product'
+import { exampleProduct } from '@/data/exampleProduct'
+import ProductPreviewCard from '@/components/ProductPreviewCard'
 
 export default function Home() {
-  const [product] = useState<Product>({
-    category: 'perfume',
-    name: 'Gabrielle Essence Eau De Parfum',
-    description:
-      'A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.',
-    currentPrice: 149.99,
-    originalPrice: 169.99,
-    image: {
-      desktopSrc: '/images/image-product-desktop.jpg',
-      mobileSrc: '/images/image-product-mobile.jpg',
-    },
-  })
+  const [product] = useState<Product>(exampleProduct)
 
   const addToCart: MouseEventHandler<HTMLButtonElement> = () => {
     alert('Added to cart')
   }
 
   return (
-    <div className={styles.home}>
+    <main className="flex h-screen w-screen items-center justify-center">
       <ProductPreviewCard
         product={product}
         addToCart={addToCart}
       />
-    </div>
+    </main>
   )
 }

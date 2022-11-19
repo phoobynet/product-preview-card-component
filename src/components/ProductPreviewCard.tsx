@@ -1,4 +1,4 @@
-import { Product } from '../types/Product'
+import { Product } from '@/types/Product'
 import ProductPreviewCardImage from './ProductPreviewCardImage'
 import ProductPreviewCardAddToCardButton from './ProductPreviewCardAddToCardButton'
 import ProductPreviewCardPrice from './ProductPreviewCardPrice'
